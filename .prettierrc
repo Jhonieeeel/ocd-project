@@ -1,0 +1,21 @@
+{
+    "plugins": ["prettier-plugin-tailwindcss", "prettier-plugin-blade"],
+    "pluginSearchDirs": false,
+    "semi": false,
+    "singleQuote": true,
+    "tabWidth": 4,
+    "printWidth": 100,
+    "trailingComma": "es5",
+    "bladeBracketSameLine": true,
+    "bladeSingleQuote": true,
+    "bladeIndentSize": 4,
+    "overrides": [
+        {
+            "files": ["*.blade.php"],
+            "options": {
+                "parser": "blade",
+                "tabWidth": 4
+            }
+        }
+    ]
+}

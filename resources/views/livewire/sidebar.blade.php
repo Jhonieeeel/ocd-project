@@ -1,5 +1,5 @@
 <div>
-    <div class="flex justify-start lg:hidden">
+    <div class="flex justify-start sm:hidden">
         <button
             type="button"
             class="inline-flex cursor-pointer items-center justify-center gap-x-2 rounded-lg px-2 py-1 align-middle text-sm font-medium text-gray-800 shadow-2xs transition-all duration-400 hover:bg-gray-400 focus:bg-gray-900 focus:outline-hidden"
@@ -73,15 +73,15 @@
             </header>
 
             <nav
-                class="sm:mt-12 h-full overflow-y-auto [&::-webkit-scrollbar]:w-2 [&::-webkit-scrollbar-thumb]:rounded-full [&::-webkit-scrollbar-thumb]:bg-gray-300 dark:[&::-webkit-scrollbar-thumb]:bg-neutral-500 [&::-webkit-scrollbar-track]:bg-gray-100 dark:[&::-webkit-scrollbar-track]:bg-neutral-700"
+                class="h-full overflow-y-auto sm:mt-12 [&::-webkit-scrollbar]:w-2 [&::-webkit-scrollbar-thumb]:rounded-full [&::-webkit-scrollbar-thumb]:bg-gray-300 dark:[&::-webkit-scrollbar-thumb]:bg-neutral-500 [&::-webkit-scrollbar-track]:bg-gray-100 dark:[&::-webkit-scrollbar-track]:bg-neutral-700"
             >
                 <div class="flex w-full flex-col flex-wrap px-2 pb-0">
                     <ul class="space-y-1">
                         <li>
                             <a
-                                class="text-smtransition-all flex items-center gap-x-3.5 rounded-lg px-2.5 py-2 duration-300 hover:bg-orange-400"
+                                class="over:bg-orange-300 flex items-center gap-x-3.5 rounded-lg px-2.5 py-2 text-sm transition-all duration-300 hover:text-orange-600"
                                 wire:navigate
-                                 wire:current.exact="font-semibold bg-orange-400"
+                                wire:current.exact="font-semibold text-orange-600"
                                 href="/"
                             >
                                 <svg
@@ -104,9 +104,9 @@
                         </li>
                         <li>
                             <a
-                                class="text-smtransition-all flex items-center gap-x-3.5 rounded-lg px-2.5 py-2 duration-300 hover:bg-orange-400"
+                                class="over:bg-orange-300 flex items-center gap-x-3.5 rounded-lg px-2.5 py-2 text-sm transition-all duration-300 hover:text-orange-600"
                                 wire:navigate
-                                 wire:current.exact="font-semibold bg-orange-400"
+                                wire:current.exact="font-semibold text-orange-600"
                                 href="{{ route('procurement.requests') }}"
                             >
                                 <svg
@@ -131,10 +131,10 @@
                             </a>
                         </li>
                         <li>
-                            <atab
-                                class="text-smtransition-all flex items-center gap-x-3.5 rounded-lg px-2.5 py-2 duration-300 hover:bg-orange-400"
+                            <a
+                                class="over:bg-orange-300 flex items-center gap-x-3.5 rounded-lg px-2.5 py-2 text-sm transition-all duration-300 hover:text-orange-600"
                                 wire:navigate
-                                 wire:current.exact="font-semibold bg-orange-400"
+                                wire:current.exact="font-semibold text-orange-600"
                                 href="{{ route('procurement.orders') }}"
                             >
                                 <svg

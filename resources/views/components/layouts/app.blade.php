@@ -8,18 +8,16 @@
 
         @vite('resources/css/app.css')
         @vite('resources/js/app.js')
+        @livewireStyles
     </head>
-    <body class="min-h-screen bg-gray-100 sm:flex sm:flex-row">
-        <!-- Sidebar -->
-        <div class="w-64 px-6 pt-6">
+    <body class="flex min-h-screen w-full flex-col bg-gray-100 sm:flex-row">
+        <div class="w-64 px-4 pt-6">
             @livewire('sidebar')
         </div>
 
-        <!-- Main content -->
-        <main class="font-poppins flex-1 sm:p-8">
-            <div class="w-full rounded-lg">
-                {{ $slot }}
-            </div>
+        <main class="font-poppins rounded sm:flex-1">
+            {{ $slot }}
         </main>
+        @livewireScripts
     </body>
 </html>

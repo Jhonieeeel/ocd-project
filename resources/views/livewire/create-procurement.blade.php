@@ -5,7 +5,7 @@
             @if (! $csv)
                 <label
                     for="file"
-                    class="flex cursor-pointer items-center gap-x-1 text-sm text-orange-700 hover:font-medium hover:text-orange-500"
+                    class="flex cursor-pointer items-center gap-x-1 text-sm whitespace-nowrap text-orange-700 hover:font-medium hover:text-orange-500"
                 >
                     <svg
                         class="size-4"

@@ -16,7 +16,9 @@
         </div>
 
         <main class="font-poppins rounded sm:flex-1">
-            {{ $slot }}
+            <div class="mx-auto w-full max-w-5xl px-4">
+                {{ $slot }}
+            </div>
         </main>
         @livewireScripts
     </body>

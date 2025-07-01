@@ -1,14 +1,12 @@
-<div class="w-full rounded p-4">
+<div class="max-w-auto relative rounded p-4">
     <div class="flex items-center justify-start sm:justify-between">
         @livewire('create-procurement')
-        <div
-            class="hs-dropdown relative inline-flex rounded-lg border-2 border-orange-600 bg-white"
-        >
-            <div class="max-w-lg space-y-3">
+        <div class="hs-dropdown relative flex rounded-lg border-2 border-orange-600 bg-white">
+            <div class="space-y-3 sm:max-w-lg">
                 <input
                     type="search"
                     wire:model.live.debounce.400ms="search"
-                    class="h-8 w-full truncate rounded-lg border-r-2 border-none border-orange-200 px-4 text-xs placeholder:text-gray-400 focus:border-orange-500 focus:ring-0 disabled:pointer-events-none disabled:opacity-50 sm:py-3"
+                    class="h-8 truncate rounded-lg border-r-2 border-none border-orange-200 px-4 text-xs placeholder:text-gray-400 focus:border-orange-500 focus:ring-0 disabled:pointer-events-none disabled:opacity-50 sm:w-full sm:py-3"
                     placeholder="Search Procurement"
                 />
             </div>
@@ -46,7 +44,7 @@
                 <div class="space-y-0.5 p-1">
                     <button
                         wire:click="selectCategory('codePap','CODE')"
-                        class="inline-flex w-full items-center gap-x-3.5 rounded-lg bg-white px-3 py-2 text-sm text-gray-800 hover:bg-gray-100 focus:bg-white focus:outline-hidden"
+                        class="inline-flex w-full items-center gap-x-3.5 rounded-lg bg-white px-3 py-2 text-sm text-gray-800 hover:bg-orange-100 focus:bg-white focus:outline-hidden"
                     >
                         CODE
                     </button>
@@ -54,6 +52,8 @@
             </div>
         </div>
     </div>
+
+    <!-- table -->
     <table
         class="min-w-full table-fixed divide-y divide-gray-200 overflow-x-auto border border-gray-300 shadow-md"
     >
@@ -65,7 +65,6 @@
                 >
                     Code Pap
                 </th>
-                {{-- hidden --}}
                 <th
                     scope="col"
                     class="hidden px-6 py-3 text-start text-xs font-medium whitespace-nowrap uppercase sm:table-cell"
@@ -78,14 +77,12 @@
                 >
                     PMO End User
                 </th>
-                {{-- hidden --}}
                 <th
                     scope="col"
-                    class="px-6 py-3 text-start text-xs font-medium whitespace-nowrap uppercase xl:hidden 2xl:table-cell"
+                    class="hidden px-6 py-3 text-start text-xs font-medium whitespace-nowrap uppercase sm:table-cell xl:hidden 2xl:table-cell"
                 >
                     Early Procurement
                 </th>
-                {{-- hidden --}}
                 <th
                     scope="col"
                     class="hidden px-6 py-3 text-start text-xs font-medium whitespace-nowrap uppercase sm:table-cell"
@@ -101,15 +98,13 @@
                 <th
                     scope="col"
                     class="px-6 py-3 text-start text-xs font-medium whitespace-nowrap uppercase"
-                >
-                    Action
-                </th>
+                ></th>
             </tr>
         </thead>
-        <tbody class="divide-y divide-gray-200">
+        <tbody class="divide-y divide-orange-200">
             @forelse ($procurements as $procurement)
                 <tr
-                    class="text-white transition duration-150 ease-in-out hover:bg-gray-100 sm:flex-row sm:text-wrap"
+                    class="cursor-default border-b-orange-200 text-white transition duration-150 ease-in-out not-hover:bg-gray-100 hover:bg-orange-100 sm:flex-row sm:text-wrap"
                 >
                     <td
                         class="w-full max-w-0 px-6 py-4 text-sm font-bold whitespace-nowrap text-gray-800 sm:w-auto sm:font-normal xl:max-w-sm"
@@ -133,7 +128,7 @@
 
                             <div class="xl:hidden">
                                 <dt class="text-xs text-gray-500">Mode of Procurement</dt>
-                                <dd class="text-sm text-gray-900">
+                                <dd class="text-sm text-wrap text-gray-900">
                                     {{ $procurement->modeProcurement }}
                                 </dd>
                             </div>
@@ -163,7 +158,7 @@
                         {{ $procurement->pmoEndUser }}
                     </td>
                     <td
-                        class="px-3 py-2 text-sm whitespace-nowrap text-gray-800 sm:px-6 sm:py-4 xl:hidden 2xl:table-cell"
+                        class="hidden px-3 py-2 text-sm whitespace-nowrap text-gray-800 sm:table-cell sm:px-6 sm:py-4 xl:hidden 2xl:table-cell"
                     >
                         {{ $procurement->earlyProcurement ? 'Yes' : 'No' }}
                     </td>
@@ -178,7 +173,7 @@
                         ₱ {{ number_format($procurement->fund?->estimatedBudgetTotal ?? 0, 2) }}
                     </td>
                     <td class="px-6 py-4 text-sm font-semibold whitespace-nowrap text-blue-500">
-                        <a href="{{ route('procurement.show', $procurement) }}">View</a>
+                        <button class="cursor-pointer">View</button>
                     </td>
                 </tr>
             @empty
@@ -193,6 +188,16 @@
             @endforelse
         </tbody>
     </table>
+
+    <!-- MODAL -->
+
+    <!-- <div class="fixed inset-0 z-50 m-auto w-full" x-data="{ show: true }" x-show="show">
+        <div x-on class="fixed inset-0 bg-gray-300 opacity-50"></div>
+        <!-- form/content -->
+        <div class="fixed inset-0 m-auto max-w-2xl bg-white p-2">
+            <p>Modal</p>
+        </div>
+    </div> -->
 
     <div class="mt-2">{{ $procurements->links() }}</div>
 </div>

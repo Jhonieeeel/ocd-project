@@ -13,6 +13,6 @@ class ProcurementRequestTable extends Component
 
     public function render()
     {
-        return view('livewire.procurement-request-table', ['procurementsRequest' => []]);
+        return view('livewire.procurement-request-table', ['procurements' => []]);
     }
 }

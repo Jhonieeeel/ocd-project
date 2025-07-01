@@ -78,8 +78,12 @@
                 <div class="flex w-full flex-col flex-wrap px-2 pb-0">
                     <ul class="space-y-1">
                         <li>
+                            @php
+                                $active = request()->is('/');
+                            @endphp
+
                             <a
-                                class="over:bg-orange-300 flex items-center gap-x-3.5 rounded-lg px-2.5 py-2 text-sm transition-all duration-300 hover:text-orange-600"
+                                class="flex items-center gap-x-3.5 rounded-lg px-2.5 py-2 text-sm transition-all duration-300 hover:text-orange-600"
                                 wire:navigate
                                 wire:current.exact="font-semibold text-orange-600"
                                 href="/"

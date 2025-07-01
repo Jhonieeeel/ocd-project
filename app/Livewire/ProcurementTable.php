@@ -18,12 +18,21 @@ class ProcurementTable extends Component
     public $category = "";
     public $wildCardValue = "";
     
+    // modal
+    public $showModal = false;
+    public $procurementData;
+
     public function selectCategory(string $value, $wildCardValue) {
         $this->category = $value;
         $this->wildCardValue = $wildCardValue;
         $this->resetPage();
        
     }
+
+    public function openModal($id) {
+        $this->procurementData = Procurement::findOrFail($id);
+    }
+
     public function render()
     {
         $query = Procurement::query();

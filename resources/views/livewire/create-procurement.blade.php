@@ -1,7 +1,7 @@
 <div class="p-6 sm:px-6 sm:py-7">
     <form wire:submit.prevent="save" enctype="multipart/form-data" class="space-y-4">
         @if (! $csv)
-            <label for="file" class="flex cursor-pointer items-center gap-x-1 text-sm">
+            <label for="file" class="flex cursor-pointer items-center justify-end gap-x-1 text-sm">
                 <svg
                     class="size-4"
                     xmlns="http://www.w3.org/2000/svg"

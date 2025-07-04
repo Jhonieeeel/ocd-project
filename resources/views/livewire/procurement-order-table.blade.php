@@ -1,3 +1,128 @@
 <div>
-    {{-- The best athlete wants his opponent at his best. --}}
+    <div class="flex flex-col text-blue-950">
+        <div class="-m-1.5 overflow-x-auto">
+            <div class="inline-block min-w-full p-1.5 align-middle">
+                <div class="overflow-hidden">
+                    <table
+                        class="overflow-hidden rounded-lg border border-gray-200 text-justify dark:border-neutral-700"
+                    >
+                        <thead class="bg-orange-400">
+                            <tr>
+                                <th
+                                    scope="col"
+                                    class="px-6 py-3 text-start text-xs font-medium uppercase dark:text-neutral-500"
+                                >
+                                    Code Pap
+                                </th>
+                                <th
+                                    scope="col"
+                                    class="px-6 py-3 text-start text-xs font-medium uppercase dark:text-neutral-500"
+                                >
+                                    Procurement Project
+                                </th>
+                                <th
+                                    scope="col"
+                                    class="hidden px-6 py-3 text-start text-xs font-medium uppercase sm:table-cell dark:text-neutral-500"
+                                >
+                                    PMO End User
+                                </th>
+                                <th
+                                    scope="col"
+                                    class="hidden px-6 py-3 text-start text-xs font-medium uppercase sm:table-cell dark:text-neutral-500"
+                                >
+                                    Early Procurement
+                                </th>
+                                <th
+                                    scope="col"
+                                    class="hidden px-6 py-3 text-start text-xs font-medium uppercase lg:table-cell dark:text-neutral-500"
+                                >
+                                    Mode of Procurement
+                                </th>
+                                <th
+                                    scope="col"
+                                    class="px-6 py-3 text-start text-xs font-medium uppercase dark:text-neutral-500"
+                                >
+                                    Estimated Budget Total
+                                </th>
+                                <th
+                                    scope="col"
+                                    class="px-6 py-3 text-end text-xs font-medium uppercase dark:text-neutral-500"
+                                >
+                                    Action
+                                </th>
+                            </tr>
+                        </thead>
+                    </table>
+                    <!-- Pagination -->
+                    <nav class="flex items-center justify-center gap-x-1" aria-label="Pagination">
+                        <button
+                            type="button"
+                            class="inline-flex min-h-9.5 min-w-9.5 items-center justify-center gap-x-1.5 rounded-lg px-2.5 py-2 text-sm text-gray-800 hover:bg-gray-100 focus:bg-gray-100 focus:outline-hidden disabled:pointer-events-none disabled:opacity-50 dark:text-white dark:hover:bg-white/10 dark:focus:bg-white/10"
+                            aria-label="Previous"
+                            disabled=""
+                        >
+                            <svg
+                                class="size-3.5 shrink-0"
+                                xmlns="http://www.w3.org/2000/svg"
+                                width="24"
+                                height="24"
+                                viewBox="0 0 24 24"
+                                fill="none"
+                                stroke="currentColor"
+                                stroke-width="2"
+                                stroke-linecap="round"
+                                stroke-linejoin="round"
+                            >
+                                <path d="m15 18-6-6 6-6"></path>
+                            </svg>
+                            <span>Previous</span>
+                        </button>
+                        <div class="flex items-center gap-x-1">
+                            <button
+                                type="button"
+                                class="flex min-h-9.5 min-w-9.5 items-center justify-center rounded-lg bg-gray-200 px-3 py-2 text-sm text-gray-800 focus:bg-gray-300 focus:outline-hidden disabled:pointer-events-none disabled:opacity-50 dark:bg-neutral-600 dark:text-white dark:focus:bg-neutral-500"
+                                aria-current="page"
+                            >
+                                1
+                            </button>
+                            <button
+                                type="button"
+                                class="flex min-h-9.5 min-w-9.5 items-center justify-center rounded-lg px-3 py-2 text-sm text-gray-800 hover:bg-gray-100 focus:bg-gray-100 focus:outline-hidden disabled:pointer-events-none disabled:opacity-50 dark:text-white dark:hover:bg-white/10 dark:focus:bg-white/10"
+                            >
+                                2
+                            </button>
+                            <button
+                                type="button"
+                                class="flex min-h-9.5 min-w-9.5 items-center justify-center rounded-lg px-3 py-2 text-sm text-gray-800 hover:bg-gray-100 focus:bg-gray-100 focus:outline-hidden disabled:pointer-events-none disabled:opacity-50 dark:text-white dark:hover:bg-white/10 dark:focus:bg-white/10"
+                            >
+                                3
+                            </button>
+                        </div>
+                        <button
+                            type="button"
+                            class="inline-flex min-h-9.5 min-w-9.5 items-center justify-center gap-x-1.5 rounded-lg px-2.5 py-2 text-sm text-gray-800 hover:bg-gray-100 focus:bg-gray-100 focus:outline-hidden disabled:pointer-events-none disabled:opacity-50 dark:text-white dark:hover:bg-white/10 dark:focus:bg-white/10"
+                            aria-label="Next"
+                        >
+                            <span>Next</span>
+                            <svg
+                                class="size-3.5 shrink-0"
+                                xmlns="http://www.w3.org/2000/svg"
+                                width="24"
+                                height="24"
+                                viewBox="0 0 24 24"
+                                fill="none"
+                                stroke="currentColor"
+                                stroke-width="2"
+                                stroke-linecap="round"
+                                stroke-linejoin="round"
+                            >
+                                <path d="m9 18 6-6-6-6"></path>
+                            </svg>
+                        </button>
+                    </nav>
+                    <!-- End Pagination -->
+                </div>
+            </div>
+        </div>
+    </div>
 </div>

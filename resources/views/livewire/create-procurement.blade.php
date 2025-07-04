@@ -48,6 +48,4 @@
             <p>{{ session('success') }}</p>
         </div>
     @endif
-
-    @livewire('procurement-table')
 </div>

@@ -96,9 +96,6 @@ class CreateProcurement extends Component
     
                 }
             });
-
-            
-            
         }
 
         session()->flash('success', 'CSV uploaded successfully!');

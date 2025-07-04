@@ -15,6 +15,7 @@ return new class extends Migration
             $table->id();
             $table->foreignId('procurement_id')->constrained()->cascadeOnDelete();
             // other fields here 
+            $table->string("");
             $table->string("requestLink")->nullable();
             $table->string("requestFIle")->nullable();
             $table->timestamps();

@@ -8,7 +8,12 @@
 
         @vite('resources/css/app.css')
         @vite('resources/js/app.js')
+        @livewireStyles
     </head>
+    <body class="flex min-h-screen w-full flex-col bg-gray-100 sm:flex-row">
+        <div class="w-64 px-4 pt-6">
+            @livewire('sidebar')
+        </div>
     <body class="min-h-screen bg-gray-100">
         <!-- ========== HEADER ========== -->
         <header
@@ -428,5 +433,6 @@
                 {{ $slot }}
             </div>
         </main>
+        @livewireScripts
     </body>
 </html>

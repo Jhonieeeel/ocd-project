@@ -3,6 +3,7 @@
 use App\Livewire\CreateProcurement;
 use App\Livewire\ProcurementOrderTable;
 use App\Livewire\ProcurementRequestTable;
+use App\Livewire\ProcurementTable;
 use App\Livewire\Settings\Appearance;
 use App\Livewire\Settings\Password;
 use App\Livewire\Settings\Profile;
@@ -13,9 +14,9 @@ use Illuminate\Support\Facades\Route;
 //     return view('welcome');
 // })->name('home');
 
-Route::get("/", CreateProcurement::class)->name('home');
+Route::get("/", ProcurementTable::class)->name('home');
 
-Route::get("/procurement", CreateProcurement::class)->name('procurements');
+Route::get("/procurement", ProcurementTable::class)->name('procurements');
 Route::get("/procurements/{procurement}", ViewProcurement::class)->name('procurement.show');
 Route::get("/procurement/request", ProcurementRequestTable::class)->name('procurement.requests');
 Route::get("/procurement/order", ProcurementOrderTable::class)->name('procurement.orders');
